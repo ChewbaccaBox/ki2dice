@@ -1,0 +1,139 @@
+{
+  "rails": {
+    "P":   "VCC",
+    "+5V": "VCC",
+    "VCC": "VCC",
+    "GND": "GND"
+  },
+
+  "parts": {
+    "7400":    { "type": "7400" },
+    "74LS00":  { "type": "7400" },
+    "74HC00":  { "type": "7400" },
+    "7402":    { "type": "7402" },
+    "74LS02":  { "type": "7402" },
+    "74LS04":  { "type": "7404" },
+    "74HC04":  { "type": "7404" },
+    "74LS07":  { "type": "7407" },
+    "74LS08":  { "type": "7408" },
+    "74LS10":  { "type": "7410" },
+    "74LS11":  { "type": "7411" },
+    "74LS20":  { "type": "7420" },
+    "74LS21":  { "type": "7421" },
+    "74LS25":  { "type": "7425" },
+    "74LS27":  { "type": "7427" },
+    "74LS30":  { "type": "7430" },
+    "74LS32":  { "type": "7432" },
+    "74LS37":  { "type": "7437" },
+    "74LS42":  { "type": "7442" },
+    "74LS48":  { "type": "7448" },
+    "74LS50":  { "type": "7450" },
+    "74LS54":  { "type": "7454" },
+    "74LS73":  { "type": "7473" },
+    "74LS74":  { "type": "7474" },
+    "74HC74":  { "type": "7474" },
+    "74LS75":  { "type": "7475" },
+    "74LS76":  { "type": "7476" },
+    "74LS83":  { "type": "7483" },
+    "74LS85":  { "type": "7485" },
+    "74LS86":  { "type": "7486" },
+    "74LS90":  { "type": "7490" },
+    "74LS92":  { "type": "7492" },
+    "74LS93":  { "type": "7493" },
+    "74LS95":  { "type": "7495" },
+    "74LS96":  { "type": "7496" },
+    "74LS107": { "type": "74107" },
+    "74LS109": { "type": "74109" },
+    "74LS116": { "type": "74116" },
+    "74LS121": { "type": "74121" },
+    "74LS150": { "type": "74150" },
+    "74LS151": { "type": "74151" },
+    "74LS153": { "type": "74153" },
+    "74LS155": { "type": "74155" },
+    "74LS161": { "type": "9316" },
+    "74LS164": { "type": "74164" },
+    "74LS165": { "type": "74165" },
+    "74LS166": { "type": "74166" },
+    "74LS174": { "type": "74174" },
+    "74LS175": { "type": "74175" },
+    "74LS190": { "type": "74190" },
+    "74LS191": { "type": "74191" },
+    "74LS192": { "type": "74192" },
+    "74LS193": { "type": "74193" },
+    "74LS194": { "type": "74194" },
+    "74LS279": { "type": "74279" },
+    "74LS390": { "type": "74390" },
+    "74S112":  { "type": "74S112" },
+    "74S287":  { "type": "74S287" },
+    "9301":    { "type": "9301" },
+    "9310":    { "type": "9310" },
+    "9311":    { "type": "9311" },
+    "9312":    { "type": "9312" },
+    "9314":    { "type": "9314" },
+    "9316":    { "type": "9316" },
+    "9321":    { "type": "9321" },
+    "9322":    { "type": "9322" },
+    "2533":    { "type": "2533" },
+    "8225":    { "type": "8225" },
+    "8277":    { "type": "8277" },
+    "82S16":   { "type": "82S16" },
+    "82S115":  { "type": "82S115" },
+    "82S123":  { "type": "82S123" },
+    "82S131":  { "type": "82S131" },
+    "TMS4800": { "type": "TMS4800" },
+
+    "9602": {
+      "type": "9602",
+      "arg": "&${ref}_desc",
+      "desc": [
+        "static Mono9602Desc ${ref}_desc(OHM(${R1_R}), U_FARAD(${C1_uF}), OHM(${R2_R}), U_FARAD(${C2_uF}));"
+      ]
+    },
+
+    "CLOCK_6_MHZ":      { "type": "CLOCK_6_MHZ" },
+    "CLOCK_8_MHZ":      { "type": "CLOCK_8_MHZ" },
+    "CLOCK_10_733_MHZ": { "type": "CLOCK_10_733_MHZ" },
+    "CLOCK_12_096_MHZ": { "type": "CLOCK_12_096_MHZ" },
+    "CLOCK_14_000_MHZ": { "type": "CLOCK_14_000_MHZ" },
+    "CLOCK_14_318_MHZ": { "type": "CLOCK_14_318_MHZ" },
+
+    "COIN_INPUT":  { "type": "COIN_INPUT" },
+    "START_INPUT": { "type": "START_INPUT" },
+
+    "JOYSTICK1_INPUT": { "type": "JOYSTICK1_INPUT" },
+    "JOYSTICK2_INPUT": { "type": "JOYSTICK2_INPUT" },
+
+    "LATCH":      { "type": "LATCH" },
+    "WIRED_AND":  { "type": "WIRED_AND" },
+    "WIRED_OR":   { "type": "WIRED_OR" },
+    "CLK_GATE":   { "type": "CLK_GATE" },
+    "CLK_GATE_n": { "type": "CLK_GATE_n" },
+
+    "DELAY": {
+      "type": "BUFFER",
+      "arg": "&${ref}_desc",
+      "desc": [
+        "static BufferDesc ${ref}_desc(DELAY_NS(${Pd (ns)}), DELAY_NS(${Pd (ns)}));"
+      ]
+    },
+
+    "VIDEO": {
+      "type": "VIDEO",
+      "name": "VIDEO",
+      "chip": "VIDEO(${game})",
+      "desc": [
+        "static VIDEO_DESC( ${game} )",
+        "\tVIDEO_RESISTANCE(1, OHM(${V1_R}))",
+        "\tVIDEO_RESISTANCE(2, OHM(${V2_R}))",
+        "\tVIDEO_RESISTANCE(3, OHM(${V3_R}))",
+        "\tVIDEO_RESISTANCE(4, OHM(${V4_R}))",
+        "\tVIDEO_RESISTANCE(5, OHM(${V5_R}))",
+        "\tVIDEO_RESISTANCE(6, OHM(${V6_R}))",
+        "\tVIDEO_RESISTANCE(7, OHM(${V7_R}))",
+        "\tVIDEO_RESISTANCE(8, OHM(${V8_R}))",
+        "\tVIDEO_CONTRAST(${CONTRAST})",
+        "VIDEO_DESC_END"
+      ]
+    }
+  }
+}
