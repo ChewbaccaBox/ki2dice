@@ -121,7 +121,7 @@ def build_chips(parts, library, game, notes):
             unmapped.append(f'{part["ref"]} ({key})')
             if not part['lib']:
                 notes.append(f'{part["ref"]}: symbol "{key}" has no library - it is a local copy in the schematic; '
-                             f're-link it to its library symbol (Change Symbol / Update Symbol from Library)')
+                             f're-link it to its library symbol (Update Symbol from Library)')
             continue
 
         values = dict(part['fields'])
@@ -137,14 +137,12 @@ def build_chips(parts, library, game, notes):
 
         if 'chip' in entry:
             line, _ = fill(entry['chip'], values)
-        elif 'arg' in entry:
-            arg, _ = fill(entry['arg'], values)
-            line = f'CHIP("{part["ref"]}", {entry["type"]}, {arg})'
+        elif 'desc' in entry:
+            line = f'CHIP("{part["ref"]}", {entry["type"]}, &{part["ref"]}_desc)'
         else:
             line = f'CHIP("{part["ref"]}", {entry["type"]})'
 
         chips[part['ref']] = {
-            'name': entry.get('name', part['ref']),
             'entry': entry,
             'line': line,
         }
@@ -158,7 +156,7 @@ def is_output(pin):
 
 def pin_text(pin, chips):
     chip = chips[pin['ref']]
-    return f'"{chip["name"]}", {pin["pin"]}'
+    return f'"{pin['ref']}", {pin["pin"]}'
 
 
 def pin_list(pins):
