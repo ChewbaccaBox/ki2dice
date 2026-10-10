@@ -143,6 +143,7 @@ def build_chips(parts, library, game, notes):
             line = f'CHIP("{part["ref"]}", {entry["type"]})'
 
         chips[part['ref']] = {
+            'name': entry.get('name', part['ref']),
             'entry': entry,
             'line': line,
         }
@@ -156,7 +157,7 @@ def is_output(pin):
 
 def pin_text(pin, chips):
     chip = chips[pin['ref']]
-    return f'"{pin['ref']}", {pin["pin"]}'
+    return f'"{chip["name"]}", {pin["pin"]}'
 
 
 def pin_list(pins):
